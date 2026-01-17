@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from approvaltests import verify, verify_all_combinations_with_labeled_input
+from approvaltests import verify_all_combinations_with_labeled_input
 
 from app.domain.dtos.item import Item
 from app.domain.dtos.order import Order
@@ -20,10 +20,12 @@ class TestApproveOrderLegacyBehaviour(TestCase):
             order_has_discount=[True, False],
             order_region=["US", "EU"],
             order_currency=["USD", "EUR"],
-            order_type=["normal", "bulk"]
+            order_type=["normal", "bulk"],
         )
 
-    def test_user_is_premium_order_amount_greater_1000_order_has_not_discount_user_region_not_eu(self):
+    def test_user_is_premium_order_amount_greater_1000_order_has_not_discount_user_region_not_eu(
+        self,
+    ):
         expected = "approved"
         user = User(
             is_premium=True,
@@ -47,8 +49,17 @@ class TestApproveOrderLegacyBehaviour(TestCase):
         self.assertEqual(expected, actual)
 
     def do_approve_order(
-            self, user_is_premium: bool, user_is_admin: bool, user_is_trial: bool, user_region: str, order_amount: int,
-            order_has_discount: bool, order_region: str, order_currency:str, order_type: str) -> str:
+        self,
+        user_is_premium: bool,
+        user_is_admin: bool,
+        user_is_trial: bool,
+        user_region: str,
+        order_amount: int,
+        order_has_discount: bool,
+        order_region: str,
+        order_currency: str,
+        order_type: str,
+    ) -> str:
         user = User(
             is_premium=user_is_premium,
             is_admin=user_is_admin,
