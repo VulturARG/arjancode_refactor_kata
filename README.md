@@ -1,4 +1,10 @@
-# Python Pre-Commit Hooks Template
+# Arjan Code Refactor Kata
+
+From https://www.youtube.com/watch?v=mH7e7fs9gaE
+
+This work follows the test design practices recommended by Emily Bache in: https://www.youtube.com/watch?v=7y6_mnniVkU
+
+---
 
 ---
 
