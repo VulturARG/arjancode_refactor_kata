@@ -1,7 +1,7 @@
 from app.domain.dtos.item import Item
 from app.domain.dtos.order import Order
 from app.domain.dtos.user import User
-from app.domain.approve_order.approve_order import approve_order
+from app.domain.approve_order.legacy_approve_order import legacy_approve_order
 
 
 def main() -> None:
@@ -26,7 +26,7 @@ def main() -> None:
         ],
     )
 
-    result = approve_order(order, user)
+    result = legacy_approve_order(order, user)
     print(f"Order approval result: {result}")
 
 
