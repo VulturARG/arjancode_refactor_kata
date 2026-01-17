@@ -2,6 +2,8 @@
 
 From https://www.youtube.com/watch?v=mH7e7fs9gaE
 
+Code from: https://github.com/ArjanCodes/examples/blob/main/2025/logic/1_starting_point.py
+
 This work follows the test design practices recommended by Emily Bache in: https://www.youtube.com/watch?v=7y6_mnniVkU
 
 ---
