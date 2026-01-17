@@ -5,7 +5,7 @@ from approvaltests import verify_all_combinations_with_labeled_input
 from app.domain.dtos.item import Item
 from app.domain.dtos.order import Order
 from app.domain.dtos.user import User
-from app.domain.appove_order.approve_order import approve_order
+from app.domain.approve_order.approve_order import approve_order
 
 
 class TestApproveOrderLegacyBehaviour(TestCase):
